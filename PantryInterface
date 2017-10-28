@@ -1,0 +1,45 @@
+/**
+ * 
+ * @author Kyle Jonson
+ *
+ */
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+
+public class PantryInterface extends Frame implements ActionListener {
+	private ArrayList<Integer> barcodes;
+	private ArrayList<String> items;
+	private Button inButton;
+	private Button outButton;
+	public PantryInterface(){
+		Frame f = new Frame();
+		setTitle("Food Pantry");
+		setSize(250,250);
+		setLayout(new FlowLayout());
+		inButton = new Button("Input");
+		add(inButton);
+		inButton.addActionListener(this);
+		outButton = new Button("Checkout");
+		add(outButton);
+		outButton.addActionListener(this);
+		addWindowListener(new WindowAdapter(){
+			public void windowClosing(WindowEvent e){
+				dispose();
+			}
+		});
+		setVisible(true);
+	}
+	
+	public static void main(String[] args){
+		GUI a = new GUI();
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+}
